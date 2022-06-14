@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
-
 using System;
 
 namespace ADO_AddressBook
@@ -9,7 +8,7 @@ namespace ADO_AddressBook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Address Book ADO!");
         }
     }
 }
