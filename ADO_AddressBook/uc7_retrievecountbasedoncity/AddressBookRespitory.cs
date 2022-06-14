@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace uc6_retrievecountbasedoncityorstate
+namespace uc7_retrievecountbasedoncity
 {
     class AddressBookRespitory
     {
@@ -134,5 +134,6 @@ namespace uc6_retrievecountbasedoncityorstate
             Console.WriteLine("{0} | {1} | {2} | {3} | {4} | {5} | {6}", addressBook.FirstName, addressBook.LastName, addressBook.Address, addressBook.PhoneNumber, addressBook.Email, addressBook.AddressBookName, addressBook.Type);
 
         }
+
     }
 }
