@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace uc8_countbasedontype
+namespace uc9_10solvedusingERimplementation
 {
-    class ContactDataManager
+     class ContactDataManager
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
