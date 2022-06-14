@@ -1,18 +1,17 @@
 using ADO_AddressBook;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UC2_insertintotableusingSP;
+using uc3_editExistingcontact;
 
-namespace ADOAddressBookValidation
+namespace uc4_TestProject1
 {
     [TestClass]
     public class AddressBookTesting
     {
-        ADO_AddressBook.AddressBookRespitory addressBookRepository;
+        AddressBookRespitory addressBookRepository;
         [TestInitialize]
-
         public void SetUp()
         {
-            addressBookRepository = new ADO_AddressBook.AddressBookRespitory();
+            addressBookRepository = new AddressBookRespitory();
         }
 
         //Usecase 2:Ability to insert new Contacts to Address Book
@@ -32,6 +31,22 @@ namespace ADOAddressBookValidation
             addressBook.AddressBookName = "FriendName";
             addressBook.Type = "Friends";
             int actual = addressBookRepository.InsertIntoTable(addressBook);
+            Assert.AreEqual(expected, actual);
+        }
+        //UseCase 3: Modify Existing Contact using their name
+        [TestMethod]
+        public void GivenUpdateQuery_ReturnOne()
+        {
+            int expected = 1;
+            int actual = addressBookRepository.UpdateQueryBasedonName();
+            Assert.AreEqual(expected, actual);
+        }
+        //UseCase 3: Modify Existing Contact using their name
+        [TestMethod]
+        public void GivenDeleteQuery_ReturnOne()
+        {
+            int expected = 1;
+            int actual = addressBookRepository.DeletePersonBasedonName();
             Assert.AreEqual(expected, actual);
         }
     }

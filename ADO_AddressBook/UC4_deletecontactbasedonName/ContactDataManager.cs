@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace uc3_editExistingcontact
+namespace UC4_deletecontactbasedonName
 {
-    public class ContactDataManager
+    class ContactDataManager
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

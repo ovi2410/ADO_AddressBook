@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace uc3_editExistingcontact
+namespace UC4_deletecontactbasedonName
 {
-    public class AddressBookRespitory
+     class AddressBookRespitory
     {
+
         //Give path for Database Connection
         public static string connection = @"Server=.;Database=Address_Book_Service_DB;Trusted_Connection=True;";
         //Represents a connection to Sql Server Database
@@ -62,6 +63,28 @@ namespace uc3_editExistingcontact
             //Open Connection
             sqlConnection.Open();
             string query = "Update Address_Book_Table set Email = 'RaniMalvi@gmail.com' where FirstName = 'Rani'";
+            //Pass query to TSql
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            int result = sqlCommand.ExecuteNonQuery();
+            if (result != 0)
+            {
+                Console.WriteLine("Updated!");
+            }
+            else
+            {
+                Console.WriteLine("Not Updated!");
+            }
+
+            //Close Connection
+            sqlConnection.Close();
+            return result;
+        }
+        //UseCase 4-Delete Contact using their name
+        public int DeletePersonBasedonName()
+        {
+            //Open Connection
+            sqlConnection.Open();
+            string query = "delete from Address_Book_Table where FirstName = 'Anita' and LastName = 'Vargheese'";
             //Pass query to TSql
             SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
             int result = sqlCommand.ExecuteNonQuery();
