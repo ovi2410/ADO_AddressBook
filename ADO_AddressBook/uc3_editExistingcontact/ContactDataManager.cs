@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC2_insertintotableusingSP
+namespace uc3_editExistingcontact
 {
     public class ContactDataManager
     {
