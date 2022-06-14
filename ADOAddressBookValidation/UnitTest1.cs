@@ -1,5 +1,7 @@
-using ADO_AddressBook;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+using ADO_AddressBook;
+
 
 namespace ADOAddressBookValidation
 {
@@ -70,6 +72,14 @@ namespace ADOAddressBookValidation
         {
             string expected = "Harsha Pramela ";
             string actual = addressBookRepository.PrintSortDataBasedOnCity("Bangalore");
+            Assert.AreEqual(expected, actual);
+        }
+        //UC 8: Ability to get number of contact persons by Type
+        [TestMethod]
+        public void GivenCountTypeQuery_ReturnString()
+        {
+            string expected = "1 5 1 ";
+            string actual = addressBookRepository.ContactDataBasedOnType();
             Assert.AreEqual(expected, actual);
         }
     }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace uc7_retrievecountbasedoncity
+namespace uc8_countbasedontype
 {
     class ContactDataManager
     {
